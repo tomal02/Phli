@@ -34,29 +34,33 @@
         icons: null,
     };
 
-    const getAppEl = () => document.getElementById("app");
+    function getAppEl(){
+        return document.getElementById("app");
+    }
 
-    const waitFor = (selector, timeout = 10000) => new Promise((resolve, reject) => {
-        const el = document.querySelector(selector);
-        if (el) return resolve(el);
+    function waitFor(selector, timeout = 10000) {
+        return new Promise((resolve, reject) => {
+            const el = document.querySelector(selector);
+            if (el) return resolve(el);
 
-        const observer = new MutationObserver(() => {
-            const found = document.querySelector(selector);
-            if (found) {
+            const observer = new MutationObserver(() => {
+                const found = document.querySelector(selector);
+                if (found) {
+                    observer.disconnect();
+                    clearTimeout(timeoutId);
+                    resolve(found);
+                }
+            });
+
+            observer.observe(document.documentElement, {childList: true, subtree: true});
+            const timeoutId = setTimeout(() => {
                 observer.disconnect();
-                clearTimeout(timeoutId);
-                resolve(found);
-            }
+                reject(new Error(`waitFor: timeout waiting for ${selector}`));
+            }, timeout);
         });
+    }
 
-        observer.observe(document.documentElement, {childList: true, subtree: true});
-        const timeoutId = setTimeout(() => {
-            observer.disconnect();
-            reject(new Error(`waitFor: timeout waiting for ${selector}`));
-        }, timeout);
-    });
-
-    const debounce = (callback, wait) => {
+    function debounce(callback, wait) {
         let timeoutId = null;
         return (...args) => {
             window.clearTimeout(timeoutId);
@@ -66,14 +70,14 @@
         };
     }
 
-    const isSidebarOpen = () => {
+    function isSidebarOpen() {
         const app = getAppEl();
         if (!app) return false;
         return (window
-                .getComputedStyle(app)
-                .getPropertyValue("--phli___is-compact-mode")
-                .trim() !== "1");
-    };
+            .getComputedStyle(app)
+            .getPropertyValue("--phli___is-compact-mode")
+            .trim() !== "1");
+    }
 
     function setCompactModeCSSVariable(isCompactMode) {
         const app = getAppEl();
