@@ -355,10 +355,6 @@
         }
     }
 
-    #browser.mac .window-buttongroup {
-        height: var(--phli__window-controls-row-height);
-    }
-
     @container style(--phli--is-hide-window-controls: 1) {
         .window-buttongroup {
             visibility: hidden;
