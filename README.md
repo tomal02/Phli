@@ -41,4 +41,4 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
-<i><span style="color: gray;">Based on <a style="text-decoration: none; color: #7ba7bc" href="https://github.com/KaKi87/phi-for-vivaldi">Phi</a> by KaKi87, licensed under MIT.</span></i>
+> *Based on [Phi by KaKi87](https://github.com/KaKi87/phi-for-vivaldi)*
