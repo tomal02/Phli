@@ -4,7 +4,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/phli-dark-mode.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/phli-light-mode.svg">
-  <img alt="Phli logo" src="./assets/phli-dark-mode.svg" width="80">
+  <img alt="Phli logo" src="assets/phli-dark-mode.svg" width="80">
 </picture>
 
 # Phli
