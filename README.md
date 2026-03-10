@@ -9,10 +9,10 @@
 
 # Phli
 
-Vivaldi browser mod extending [(Phi)](https://github.com/KaKi87/phi-for-vivaldi) with left sidebar hover
-functionality and a few other Arc-inspired tweaks.
+Vivaldi browser mod extending [Phi](https://github.com/KaKi87/phi-for-vivaldi) with left sidebar hover
+and a few other Arc-inspired tweaks.
 
-![Demo gif showing the smooth hover addition](assets/Phli-Hover-OpenClose.gif)
+<img src="assets/Phli-Hover-OpenClose.gif" alt="Demo GIF showcasing smooth hover open/close of the left side tab bar" width="400" />
 
 </div>
 
