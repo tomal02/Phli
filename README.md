@@ -12,7 +12,9 @@
 Vivaldi browser mod extending [Phi](https://github.com/KaKi87/phi-for-vivaldi) with left sidebar hover
 and a few other Arc-inspired tweaks.
 
-<img src="assets/Phli-Hover-OpenClose.gif" alt="Demo GIF showcasing smooth hover open/close of the left side tab bar" width="400" />
+<img src="assets/Phli-Hover-OpenClose.gif"
+alt="Demo GIF showcasing smooth hover open/close of the left side tab bar"
+width="400" />
 
 </div>
 
@@ -33,7 +35,7 @@ manage Vivaldi mods, including useful community resources in the replies.
 ## Features
 
 - Arc-like sidebar hover open/close with a lock toggle button
-- *(More Arc-inspired tweaks planned, with the next being the `cmd+t` popup interface)*
+- *(More Arc-inspired tweaks planned, with the next being the `⌘+t` popup interface)*
 
 ## License
 
